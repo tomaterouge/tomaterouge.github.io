@@ -8,6 +8,19 @@ interface MarkdownProps {
   content: string;
 }
 
+// Helper to generate IDs from children (which might be mixed text/nodes)
+export const generateId = (children: React.ReactNode) => {
+  // Convert React children to a simple string
+  const text = Array.isArray(children) 
+    ? children.map(child => (typeof child === 'string' ? child : '')).join('') 
+    : typeof children === 'string' ? children : String(children);
+    
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '') // Strip special chars (like math symbols)
+    .replace(/\s+/g, '-');
+};
+
 export function Markdown({ content }: MarkdownProps) {
   return (
     <ReactMarkdown
@@ -29,13 +42,27 @@ export function Markdown({ content }: MarkdownProps) {
           );
         },
         h1: ({children}) => <h1 className="text-3xl font-bold text-white mt-8 mb-4">{children}</h1>,
-        h2: ({children}) => <h2 id={String(children).toLowerCase().replace(/\s+/g, '-')} className="text-2xl font-semibold text-white mt-8 mb-4 border-b border-zinc-700 pb-2 scroll-mt-24">{children}</h2>,
-        h3: ({children}) => <h3 id={String(children).toLowerCase().replace(/\s+/g, '-')} className="text-xl font-semibold text-zinc-100 mt-6 mb-3 scroll-mt-24">{children}</h3>,
+        // Apply the safe ID generation to H2 and H3
+        h2: ({children}) => <h2 id={generateId(children)} className="text-2xl font-semibold text-white mt-8 mb-4 border-b border-zinc-700 pb-2 scroll-mt-24">{children}</h2>,
+        h3: ({children}) => <h3 id={generateId(children)} className="text-xl font-semibold text-zinc-100 mt-6 mb-3 scroll-mt-24">{children}</h3>,
         p: ({children}) => <p className="leading-7 text-zinc-300 mb-4">{children}</p>,
         ul: ({children}) => <ul className="list-disc list-inside mb-4 text-zinc-300 space-y-1">{children}</ul>,
         ol: ({children}) => <ol className="list-decimal list-inside mb-4 text-zinc-300 space-y-1">{children}</ol>,
         blockquote: ({children}) => <blockquote className="border-l-4 border-teal-500 pl-4 italic my-4 text-zinc-400">{children}</blockquote>,
         a: ({children, href}) => <a href={href} className="text-teal-400 hover:text-teal-300 hover:underline transition-colors">{children}</a>,
+        // --- Table Formatting ---
+        table: ({children}) => (
+          <div className="overflow-x-auto my-8 border border-zinc-700 rounded-lg">
+            <table className="w-full text-left border-collapse text-sm">
+              {children}
+            </table>
+          </div>
+        ),
+        thead: ({children}) => <thead className="bg-zinc-800/80 text-zinc-100 border-b border-zinc-700">{children}</thead>,
+        tbody: ({children}) => <tbody className="divide-y divide-zinc-700/50 bg-zinc-900/30">{children}</tbody>,
+        tr: ({children}) => <tr className="hover:bg-zinc-800/40 transition-colors">{children}</tr>,
+        th: ({children}) => <th className="px-4 py-3 font-semibold whitespace-nowrap">{children}</th>,
+        td: ({children}) => <td className="px-4 py-3 text-zinc-300 align-top">{children}</td>,
       }}
     >
       {content}

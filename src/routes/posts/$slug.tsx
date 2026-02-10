@@ -60,7 +60,7 @@ function PostDetail() {
 
       <div className="flex flex-col lg:flex-row gap-12">
         <article className="flex-1 min-w-0">
-          <Markdown content={post.content} />
+          <Markdown content={post.content}  />
         </article>
         
         <aside className="hidden lg:block w-64 shrink-0">

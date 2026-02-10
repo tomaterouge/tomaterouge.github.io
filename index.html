@@ -3,11 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI & HPC Blog - Stephane Mbatchou - TensorLog</title>
-    <!-- KaTeX CSS for Math -->
+    
+    <!-- --- Primary SEO --- -->
+    <title>TensorLog | AI, HPC & Optimization Blog</title>
+    <meta name="description" content="Technical deep dives into High-Performance Computing, LLM Quantization, CUDA Kernels, and AI Optimization. A blog for ML Engineers and Systems Architects." />
+    <meta name="keywords" content="AI, Machine Learning, HPC, CUDA, FlashAttention, Quantization, LLM, GPU Optimization, PyTorch, C++" />
+    <meta name="author" content="Stephane Mbatchou" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- --- Canonical URL (Prevents duplicate content issues) --- -->
+    <link rel="canonical" href="https://tomaterouge.github.io/" />
+
+    <!-- --- Open Graph / Facebook / LinkedIn --- -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tomaterouge.github.io/" />
+    <meta property="og:title" content="TensorLog | AI & HPC Engineering" />
+    <meta property="og:description" content="Exploring the intersection of AI and hardware. Tutorials on CUDA, Triton, and optimizing Large Language Models." />
+    <meta property="og:image" content="https://tomaterouge.github.io/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="TensorLog" />
+
+    <!-- --- Twitter / X --- -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://tomaterouge.github.io/" />
+    <meta name="twitter:title" content="TensorLog | AI & HPC Optimization" />
+    <meta name="twitter:description" content="Deep dives into LLM quantization and GPU kernels." />
+    <meta name="twitter:image" content="https://tomaterouge.github.io/og-image.png" />
+    <!-- Replace with your actual Twitter handle if you have one -->
+    <!-- <meta name="twitter:creator" content="@yourhandle" /> -->
+
+    <!-- --- Icons & Theme --- -->
+    <link rel="icon" type="image/svg+xml" href="/red-tomato.ico" />
+    <meta name="theme-color" content="#18181b" />
+
+    <!-- --- KaTeX for Math Rendering --- -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+    <!-- --- Structured Data (JSON-LD) --- -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "TensorLog",
+        "url": "https://tomaterouge.github.io/",
+        "description": "Technical blog covering AI, HPC, and Optimization.",
+        "author": {
+          "@type": "Person",
+          "name": "Stephane Mbatchou",
+          "url": "https://github.com/tomaterouge"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "TensorLog",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://tomaterouge.github.io/vite.svg"
+          }
+        }
+      }
+    </script>
   </head>
-  <body class="bg-zinc-900 text-zinc-200 antialiased min-h-screen selection:bg-teal-500/30">
+  <body class="bg-zinc-900 text-zinc-200 antialiased min-h-screen selection:bg-teal-500/30 overflow-y-scroll">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
