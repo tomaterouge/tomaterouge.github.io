@@ -28,5 +28,5 @@ export default defineConfig({
   },
 
   // Ensure base is set for GitHub Pages if needed, strictly defaults to '/'
-  base: './', 
+  base: '/', 
 })
