@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
+import remarkGfm  from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import { CodeBlock } from './CodeBlock';
 
@@ -10,7 +11,7 @@ interface MarkdownProps {
 export function Markdown({ content }: MarkdownProps) {
   return (
     <ReactMarkdown
-      remarkPlugins={[remarkMath]}
+      remarkPlugins={[remarkMath, remarkGfm]}
       rehypePlugins={[rehypeKatex]}
       components={{
         code(props) {

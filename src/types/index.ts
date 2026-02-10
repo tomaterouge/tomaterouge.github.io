@@ -1,12 +1,17 @@
-export interface Post {
-  id: string;
+
+export type Theme = 'dark' | 'light';
+
+
+export interface PostMetadata {
   slug: string;
   title: string;
-  excerpt: string;
-  content: string;
   date: string;
+  excerpt: string;
   tags: string[];
   readTime: string;
 }
 
-export type Theme = 'dark' | 'light';
+export interface Post extends PostMetadata {
+  id: string;
+  content: string;
+}

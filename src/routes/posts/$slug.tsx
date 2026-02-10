@@ -1,26 +1,19 @@
-import { createFileRoute } from '@tanstack/react-router';
-import { useQuery } from '@tanstack/react-query';
-import { getPostBySlug } from '../../utils/posts';
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { usePost } from '../../hooks/usePosts'; // Updated import
 import { Markdown } from '../../components/Markdown';
 import { TableOfContents } from '../../components/TableOfContents';
 import { Calendar, Clock, ChevronLeft } from 'lucide-react';
-import { Link } from '@tanstack/react-router';
 
 export const Route = createFileRoute('/posts/$slug')({
   component: PostDetail,
   loader: async ({ params: { slug } }) => {
-    // In a real app, you might prefetch here. 
-    // We'll rely on useQuery component-side for this demo to handle loading states nicely.
     return { slug };
   },
 });
 
 function PostDetail() {
   const { slug } = Route.useLoaderData();
-  const { data: post, isLoading } = useQuery({
-    queryKey: ['post', slug],
-    queryFn: () => getPostBySlug(slug),
-  });
+  const { data: post, isLoading, isError } = usePost(slug);
 
   if (isLoading) {
     return (
@@ -28,16 +21,11 @@ function PostDetail() {
         <div className="h-4 w-24 bg-zinc-800 rounded mb-8"></div>
         <div className="h-12 w-3/4 bg-zinc-800 rounded mb-4"></div>
         <div className="h-6 w-1/2 bg-zinc-800 rounded mb-12"></div>
-        <div className="space-y-4">
-          <div className="h-4 w-full bg-zinc-800 rounded"></div>
-          <div className="h-4 w-full bg-zinc-800 rounded"></div>
-          <div className="h-4 w-5/6 bg-zinc-800 rounded"></div>
-        </div>
       </div>
     );
   }
 
-  if (!post) {
+  if (isError || !post) {
     return (
       <div className="container mx-auto py-20 text-center">
         <h1 className="text-4xl font-bold text-zinc-200 mb-4">404</h1>

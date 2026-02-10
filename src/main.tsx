@@ -1,6 +1,21 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createRouter } from '@tanstack/react-router';
+import { Buffer as BufferPollyfill} from 'buffer';
+
+// --- POLYFILL & TYPE AUGMENTATION ---
+
+// 1. Extend the global namespace to include Buffer
+declare global {
+  // eslint-disable-next-line no-var
+  var Buffer: typeof BufferPollyfill;
+}
+
+// 2. Assign Buffer to globalThis (now strictly typed)
+globalThis.Buffer = BufferPollyfill;
+
+// --- APP INITIALIZATION ---
+
 import { routeTree } from './routeTree.gen';
 import './index.css';
 

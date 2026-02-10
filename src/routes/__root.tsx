@@ -25,8 +25,8 @@ export const Route = createRootRoute({
             Only rendered in development mode to assist with debugging 
             file-based routing and navigation states.
         */}
-        {process.env.NODE_ENV === 'development' && (
-          <TanStackRouterDevtools position="bottom-right" />
+        { (
+          <TanStackRouterDevtools position="bottom-right" initialIsOpen={false} />
         )}
       </div>
     </QueryClientProvider>
