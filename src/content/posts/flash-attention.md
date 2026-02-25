@@ -3,7 +3,6 @@ title: "Understanding FlashAttention: IO-Aware Exact Attention"
 date: "2025-02-08"
 excerpt: "Deep dive into the math and implementation of FlashAttention, optimizing GPU HBM access patterns."
 tags: ["Optimization", "CUDA", "HPC"]
-readTime: "8 min read"
 ---
 
 ## The IO Bottleneck

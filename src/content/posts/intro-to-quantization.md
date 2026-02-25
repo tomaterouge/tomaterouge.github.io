@@ -3,7 +3,6 @@ title: "Introduction to LLM Quantization"
 date: "2025-02-10"
 excerpt: "How to fit 70B models into consumer GPUs using INT8, FP4, and NF4 techniques."
 tags: ["AI", "LLM", "Efficiency"]
-readTime: "6 min read"
 ---
 
 ## Why Quantize?

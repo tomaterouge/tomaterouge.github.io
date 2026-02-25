@@ -11,8 +11,7 @@ function AboutPage() {
       <header className="mb-12">
         <h1 className="text-4xl font-extrabold text-white mb-4">About</h1>
         <p className="text-xl text-zinc-400">
-          This platform documents my exploration of High Performance Computing and Artificial Intelligence, serving as a knowledge base for technical experiments and architectural patterns. 
-          My goal is to bridge the gap between theoretical research and practical, scalable application building.
+          This platform documents my exploration of High Performance Computing and Artificial Intelligence, serving as a knowledge base for technical experiments and architectural patterns.
         </p>
       </header>
 
@@ -22,7 +21,6 @@ function AboutPage() {
             <Cpu className="text-teal-400" size={24} /> My Focus
           </h2>
           <p className="text-zinc-300 leading-relaxed">
-            I am dedicated to deconstructing the architecture and design principles behind modern AI/ML systems to understand how they function at scale. 
             I emphasize applied science, focusing on the engineering craft required to translate abstract models into robust, efficient products.
           </p>
         </div>

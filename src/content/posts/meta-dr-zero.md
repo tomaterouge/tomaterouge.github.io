@@ -3,7 +3,6 @@ title: "The Architecture of Autonomy: A Deep Dive into Meta’s Dr. Zero and HRP
 date: "2026-02-09"
 excerpt: "An exhaustive technical breakdown of the DeepResearch-Zero framework, exploring the Proposer-Solver co-evolution loop and the 75% efficiency gains of Hop-Grouped Relative Policy Optimization."
 tags: ["Machine Learning", "Reinforcement Learning", "Meta AI", "HRPO", "Deep Research"]
-readTime: "12 min read"
 ---
 
 # The Dawn of DeepResearch-Zero: When AI Teaches Itself to Research

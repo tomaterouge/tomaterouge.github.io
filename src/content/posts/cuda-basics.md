@@ -3,7 +3,6 @@ title: "CUDA Programming Basics for ML Engineers"
 date: "2025-02-12"
 excerpt: "Master the GPU thread hierarchy and memory model to write custom high-performance kernels."
 tags: ["CUDA", "HPC", "C++"]
-readTime: "12 min read"
 ---
 
 ## Thread Hierarchy

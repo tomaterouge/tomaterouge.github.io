@@ -13,12 +13,12 @@ export function ProfileCard() {
         />
         <div>
           <h3 className="font-bold text-zinc-100 text-lg">Stephane Mbatchou</h3>
-          <p className="text-zinc-400 text-sm">Red Tomato</p>
+          <p className="text-zinc-400 text-sm">Tomate Rouge</p>
         </div>
       </div>
       
       <p className="text-zinc-400 text-sm leading-relaxed">
-Dedicated to uncovering the potential of AI and Distributed Computing through collaborative learning. This space translates abstract theory into accessible knowledge, sharing insights to foster a deeper understanding of the field. The mission is to inspire purposeful growth and technical confidence.      </p>
+Dedicated to uncovering the potential of AI and Distributed Computing through collaborative learning. I will be sharing my insights to deepen my understanding and inspire purposeful growth and technical confidence.      </p>
 
       {/* <div className="flex gap-3 pt-2">
         <a href="https://github.com/orange-jaune" target="_blank" className="text-zinc-500 hover:text-teal-400 transition-colors">
@@ -37,20 +37,3 @@ Dedicated to uncovering the potential of AI and Distributed Computing through co
     </div>
   );
 }
-
-
-
-
-// About Me
-// I am driven by a curiosity for the mechanics of complex systems and the iterative process of turning conceptual models into functional reality. This space serves as an open journal for documenting those discoveries and sharing the journey of building with intent.
-
-// My Focus
-// I concentrate on the intersection of AI/ML, system architecture, and design, with a rigorous emphasis on applied science and the craft of product building. My goal is to bridge the gap between abstract theory and practical application to foster knowledge sharing and the creation of impactful, real-world tools.
-
-
-
-// About Me
-// This platform documents my exploration of High Performance Computing and Artificial Intelligence, serving as a knowledge base for technical experiments and architectural patterns. My goal is to bridge the gap between theoretical research and practical, scalable application building.
-
-// My Focus
-// I am dedicated to deconstructing the architecture and design principles behind modern AI/ML systems to understand how they function at scale. I emphasize applied science, focusing on the engineering craft required to translate abstract models into robust, efficient products.
