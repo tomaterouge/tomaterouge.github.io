@@ -7,7 +7,7 @@ export function ProfileCard() {
     <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/50 space-y-4">
       <div className="flex items-center gap-4 md:flex-col md:items-start lg:flex-row lg:items-center">
         <img 
-          src="https://github.com/orange-jaune.png" 
+          src="/red-tomato.ico" 
           alt="Profile" 
           className="w-16 h-16 rounded-full border-2 border-teal-500/50"
         />

@@ -13,7 +13,7 @@ import { Footer } from '../components/Footer';
 export const Route = createRootRoute({
   component: () => (
     <QueryClientProvider client={queryClient}>
-      <div className="flex flex-col min-h-screen bg-zinc-900 selection:bg-teal-500/30">
+      <div className="flex flex-col min-h-screen selection:bg-teal-500/30">
         <Header />
         <main className="flex-1 w-full">
           <Outlet />

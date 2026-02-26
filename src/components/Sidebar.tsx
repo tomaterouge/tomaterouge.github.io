@@ -9,7 +9,7 @@ interface SidebarProps {
 
 export function Sidebar({ tags, selectedTag, onSelectTag }: SidebarProps) {
   return (
-    <aside className="w-full md:w-64 space-y-8">
+    <aside className="w-full space-y-8">
       <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/50 sticky top-24">
         <h3 className="font-bold text-zinc-100 mb-4 flex items-center gap-2">
           <Tag size={18} className="text-teal-500" /> Topics

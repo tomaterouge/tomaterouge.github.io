@@ -73,7 +73,7 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
       </div>
         <div 
           // dangerouslySetInnerHTML={{ __html: html }} 
-          className="text-sm [&>pre]:!bg-transparent [&>pre]:!p-4 [&>pre]:overflow-auto [&_code]:font-mono"
+          className="text-sm [&>pre]:bg-transparent! [&>pre]:p-4! [&>pre]:overflow-auto [&_code]:font-mono"
         >
         <ReactMarkdown
           // rehype-raw is required to render the HTML string Shiki produces
