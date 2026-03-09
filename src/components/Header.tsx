@@ -19,10 +19,10 @@ export function Header() {
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors [&.active]:text-teal-400">
+          <Link to="/" className="text-sm font-medium text-zinc-200 hover:text-white transition-colors [&.active]:text-teal-400">
             Blog
           </Link>
-          <Link to="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors [&.active]:text-teal-400">
+          <Link to="/about" className="text-sm font-medium text-zinc-200 hover:text-white transition-colors [&.active]:text-teal-400">
             About
           </Link>
           {/* <a href="https://github.com/orange-jaune" target="_blank" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
@@ -31,7 +31,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Toggle */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-zinc-400 hover:text-white">
+        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-zinc-200 hover:text-white">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -39,8 +39,8 @@ export function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <nav className="md:hidden bg-zinc-900 border-b border-zinc-800 px-4 py-6 flex flex-col space-y-4 animate-in slide-in-from-top duration-200">
-          <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-medium text-zinc-300 active:text-teal-400">Blog</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="text-lg font-medium text-zinc-300 active:text-teal-400">About</Link>
+          <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-medium text-zinc-100 active:text-teal-400">Blog</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} className="text-lg font-medium text-zinc-100 active:text-teal-400">About</Link>
           {/* <a href="https://github.com/orange-jaune" className="text-lg font-medium text-zinc-300">GitHub</a> */}
         </nav>
       )}

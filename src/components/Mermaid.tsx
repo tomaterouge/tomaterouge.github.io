@@ -97,7 +97,7 @@ export function Mermaid({ chart, height }: MermaidProps) {
   if (!svg) {
     return (
       <div className={clsx("animate-pulse bg-zinc-800/50 rounded-lg my-6 border border-zinc-700 flex items-center justify-center", heightClass)}>
-        <span className="text-zinc-500 text-sm">Rendering diagram...</span>
+        <span className="text-zinc-200 text-sm">Rendering diagram...</span>
       </div>
     );
   }
@@ -112,7 +112,7 @@ export function Mermaid({ chart, height }: MermaidProps) {
         onClick={toggleExpand}
         title="Click to expand"
       >
-        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-zinc-800/80 p-1.5 rounded-lg text-zinc-400 hover:text-white">
+        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-zinc-800/80 p-1.5 rounded-lg text-zinc-50 hover:text-white">
           <ZoomIn size={18} />
         </div>
         <div 
@@ -128,7 +128,7 @@ export function Mermaid({ chart, height }: MermaidProps) {
           onClick={toggleExpand}
         >
           <button 
-            className="absolute top-6 right-6 p-2 cursor-pointer rounded-full bg-zinc-800 text-zinc-300 hover:bg-zinc-700 hover:text-white transition-colors"
+            className="absolute top-6 right-6 p-2 cursor-pointer rounded-full bg-zinc-800 text-zinc-50 hover:bg-zinc-700 hover:text-white transition-colors"
             onClick={(e) => { e.stopPropagation(); setIsExpanded(false); }}
           >
             <X size={24} />

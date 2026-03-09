@@ -12,12 +12,12 @@ export function ProfileCard() {
           className="w-16 h-16 rounded-full border-2 border-teal-500/50"
         />
         <div>
-          <h3 className="font-bold text-zinc-100 text-lg">Stephane Mbatchou</h3>
-          <p className="text-zinc-400 text-sm">Tomate Rouge</p>
+          <h3 className="font-bold text-zinc-50 text-lg">Stephane Mbatchou</h3>
+          <p className="text-zinc-200 text-sm">Tomate Rouge</p>
         </div>
       </div>
       
-      <p className="text-zinc-400 text-sm leading-relaxed">
+      <p className="text-zinc-50 text-sm leading-relaxed">
 Dedicated to uncovering the potential of AI and Distributed Computing through collaborative learning. I will be sharing my insights to deepen my understanding and inspire purposeful growth and technical confidence.      </p>
 
       {/* <div className="flex gap-3 pt-2">

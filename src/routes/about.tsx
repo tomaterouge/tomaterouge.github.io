@@ -10,7 +10,7 @@ function AboutPage() {
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <header className="mb-12">
         <h1 className="text-4xl font-extrabold text-white mb-4">About</h1>
-        <p className="text-xl text-zinc-400">
+        <p className="text-xl text-zinc-100">
           This platform documents my exploration of High Performance Computing and Artificial Intelligence, serving as a knowledge base for technical experiments and architectural patterns.
         </p>
       </header>
@@ -20,7 +20,7 @@ function AboutPage() {
           <h2 className="text-2xl font-bold text-zinc-100 mb-4 flex items-center gap-2">
             <Cpu className="text-teal-400" size={24} /> My Focus
           </h2>
-          <p className="text-zinc-300 leading-relaxed">
+          <p className="text-zinc-100 leading-relaxed">
             I emphasize applied science, focusing on the engineering craft required to translate abstract models into robust, efficient products.
           </p>
         </div>

@@ -65,7 +65,7 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
       <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
         <button
           onClick={copyToClipboard}
-          className="p-1.5 rounded-md bg-zinc-700 hover:bg-zinc-600 text-zinc-300 transition-colors cursor-pointer"
+          className="p-1.5 rounded-md bg-zinc-700 hover:bg-zinc-600 text-zinc-200 transition-colors cursor-pointer"
           aria-label="Copy code"
         >
           {copied ? <Check size={16} className="text-emerald-400" /> : <Copy size={16} />}

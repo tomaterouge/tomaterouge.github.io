@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router';
 import { usePost } from '../../hooks/usePosts'; // Updated import
 import { Markdown } from '../../components/Markdown';
 import { TableOfContents } from '../../components/TableOfContents';
-import { Calendar, Clock, ChevronLeft } from 'lucide-react';
+import { Calendar, ChevronLeft } from 'lucide-react';
 
 export const Route = createFileRoute('/posts/$slug')({
   component: PostDetail,
@@ -28,8 +28,8 @@ function PostDetail() {
   if (isError || !post) {
     return (
       <div className="container mx-auto py-20 text-center">
-        <h1 className="text-4xl font-bold text-zinc-200 mb-4">404</h1>
-        <p className="text-zinc-500 mb-8">Post not found</p>
+        <h1 className="text-4xl font-bold text-zinc-100 mb-4">404</h1>
+        <p className="text-zinc-100 mb-8">Post not found</p>
         <Link to="/" className="text-teal-400 hover:underline">Back to Home</Link>
       </div>
     );
@@ -37,14 +37,14 @@ function PostDetail() {
 
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl">
-      <Link to="/" className="inline-flex items-center text-sm text-zinc-500 hover:text-teal-400 mb-8 transition-colors">
+      <Link to="/" className="inline-flex items-center text-sm text-zinc-100 hover:text-teal-400 mb-8 transition-colors">
         <ChevronLeft size={16} className="mr-1" /> Back to blog
       </Link>
 
       <header className="mb-12 max-w-4xl">
-        <div className="flex gap-4 text-sm text-zinc-400 mb-4 font-mono">
+        <div className="flex gap-4 text-sm text-zinc-100 mb-4 font-mono">
           <span className="flex items-center gap-1.5"><Calendar size={15} /> {post.date}</span>
-          <span className="flex items-center gap-1.5"><Clock size={15} /> {post.readTime}</span>
+          {/* <span className="flex items-center gap-1.5"><Clock size={15} /> {post.readTime}</span> */}
         </div>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
           {post.title}
@@ -59,7 +59,7 @@ function PostDetail() {
       </header>
 
       <div className="flex flex-col lg:flex-row gap-12">
-        <article className="flex-1 min-w-0">
+        <article className="flex-1 min-w-0 text-zinc-50">
           <Markdown content={post.content}  />
         </article>
         

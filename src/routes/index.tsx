@@ -87,8 +87,8 @@ function Index() {
               paginatedPosts.map(post => <PostCard key={post.id} post={post} />)
             ) : (
               // Empty State
-              <div className="text-center py-20 px-6 text-zinc-500 border border-zinc-800/50 rounded-2xl border-dashed bg-zinc-900/20">
-                <p className="text-lg font-medium text-zinc-400 mb-2">No posts found</p>
+              <div className="text-center py-20 px-6 text-zinc-200 border border-zinc-800/50 rounded-2xl border-dashed bg-zinc-900/20">
+                <p className="text-lg font-medium text-zinc-100 mb-2">No posts found</p>
                 <p className="text-sm">Try adjusting your search or filters.</p>
                 <button 
                   onClick={() => { setSearch(''); setSelectedTag(null); }}

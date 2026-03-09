@@ -11,7 +11,7 @@ export function Sidebar({ tags, selectedTag, onSelectTag }: SidebarProps) {
   return (
     <aside className="w-full space-y-8">
       <div className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/50 sticky top-24">
-        <h3 className="font-bold text-zinc-100 mb-4 flex items-center gap-2">
+        <h3 className="font-bold text-zinc-50 mb-4 flex items-center gap-2">
           <Tag size={18} className="text-teal-500" /> Topics
         </h3>
         <div className="flex flex-wrap gap-2">
@@ -21,7 +21,7 @@ export function Sidebar({ tags, selectedTag, onSelectTag }: SidebarProps) {
               "cursor-pointer text-xs px-3 py-1.5 rounded-full border transition-all",
               selectedTag === null
                 ? "bg-teal-500/10 text-teal-400 border-teal-500/50"
-                : "bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500"
+                : "bg-zinc-800 text-zinc-100 border-zinc-700 hover:border-zinc-500"
             )}
           >
             All
@@ -34,7 +34,7 @@ export function Sidebar({ tags, selectedTag, onSelectTag }: SidebarProps) {
                 "cursor-pointer text-xs px-3 py-1.5 rounded-full border transition-all",
                 selectedTag === tag
                   ? "bg-teal-500/10 text-teal-400 border-teal-500/50"
-                  : "bg-zinc-800 text-zinc-400 border-zinc-700 hover:border-zinc-500"
+                  : "bg-zinc-800 text-zinc-100 border-zinc-700 hover:border-zinc-500"
               )}
             >
               {tag}
